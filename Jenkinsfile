@@ -16,5 +16,11 @@ agent any
     }
 
  }
+stage('GenerarJar') {
+steps {
+echo "Estoy generando el jar del proyecto"
+sh './mvnw package'
+}
+}
 
 }

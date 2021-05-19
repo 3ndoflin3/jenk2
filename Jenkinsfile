@@ -14,13 +14,19 @@ agent any
 	sh './mvnw test'
 	}
     }
-
- }
 stage('GenerarJar') {
 steps {
 echo "Estoy generando el jar del proyecto"
 sh './mvnw package'
 }
 }
-
+stage('deploy') {
+steps {
+echo "Estoy desplegando "
+sh 'cp target/calculadora-0.0.1-SNAPSHOT.jar /tmp'
 }
+}
+
+
+ }
+

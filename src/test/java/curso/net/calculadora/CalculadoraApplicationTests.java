@@ -1,13 +1,12 @@
 package curso.net.calculadora;
+import org.junit.Test;
+import static org.junit.Assert.assertEquals;
 
-import org.junit.jupiter.api.Test;
-import org.springframework.boot.test.context.SpringBootTest;
+public class CalculadoraApplicationTests {
+private Calculadora calculator = new Calculadora();
 
-@SpringBootTest
-class CalculadoraApplicationTests {
-
-	@Test
-	void contextLoads() {
-	}
-
+ @Test
+public void testSum() {
+assertEquals(5, calculator.sum(2, 3));
+}
 }
